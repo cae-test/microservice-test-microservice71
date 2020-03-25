@@ -118,7 +118,7 @@ public class testMicroservice extends RESTService {
     if(testResponse_condition) {
       JSONObject testResult = new JSONObject();
 
-      
+      test
 
       return Response.status(HttpURLConnection.HTTP_OK).entity(testResult.toJSONString()).build();
     }
