@@ -71,9 +71,9 @@ public class testMicroservice extends RESTService {
 
   @Api
   @SwaggerDefinition(
-      info = @Info(title = "test-microservice71", version = "$Metadata_Version$",
-          description = "$Metadata_Description$",
-          termsOfService = "$Metadata_Terms$",
+      info = @Info(title = "test-microservice71", version = "",
+          description = "",
+          termsOfService = "",
           contact = @Contact(name = "test", email = "CAEAddress@gmail.com") ,
           license = @License(name = "BSD",
               url = "https://github.com/cae-test/microservice-test-microservice71/blob/master/LICENSE.txt") ) )
@@ -84,7 +84,7 @@ public class testMicroservice extends RESTService {
 
       /**
    * 
-   * 
+   * testMethod
    *
    * 
    *
@@ -93,14 +93,14 @@ public class testMicroservice extends RESTService {
    * 
    */
   @GET
-  @Path("/")
+  @Path("/testmethod")
   @Produces(MediaType.APPLICATION_JSON)
   @Consumes(MediaType.TEXT_PLAIN)
   @ApiResponses(value = {
-       @ApiResponse(code = HttpURLConnection.HTTP_OK, message = "")
+       @ApiResponse(code = HttpURLConnection.HTTP_OK, message = "testResponse")
   })
-  @ApiOperation(value = "", notes = " ")
-  public Response () {
+  @ApiOperation(value = "testMethod", notes = " ")
+  public Response testMethod() {
 
 
 
@@ -113,14 +113,14 @@ public class testMicroservice extends RESTService {
 
 
 
-    // 
-    boolean _condition = true;
-    if(_condition) {
-      JSONObject  = new JSONObject();
+    // testResponse
+    boolean testResponse_condition = true;
+    if(testResponse_condition) {
+      JSONObject testResult = new JSONObject();
 
       
 
-      return Response.status(HttpURLConnection.HTTP_OK).entity(.toJSONString()).build();
+      return Response.status(HttpURLConnection.HTTP_OK).entity(testResult.toJSONString()).build();
     }
     return null;
   }
